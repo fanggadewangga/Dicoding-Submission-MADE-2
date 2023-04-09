@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_user_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/user_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_user_avatar"
+            tools:text="@string/my_name" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_username"
+            app:layout_constraintTop_toBottomOf="@id/tv_username"
+            tools:ignore="TextContrastCheck"
+            tools:text="@string/my_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_favorite"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/unfavorite"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_username"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/iv_company"
+            style="@style/DetailIcon"
+            android:contentDescription="@string/company"
+            android:src="@drawable/company"
+            app:layout_constraintStart_toStartOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_user_avatar"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/Value"
+            app:layout_constraintBottom_toBottomOf="@id/iv_company"
+            app:layout_constraintStart_toEndOf="@id/iv_company"
+            app:layout_constraintTop_toTopOf="@id/iv_company"
+            tools:ignore="TextContrastCheck"
+            tools:text="@string/my_university" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            style="@style/DetailIcon"
+            android:contentDescription="@string/location"
+            android:src="@drawable/place"
+            app:layout_constraintStart_toStartOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_company"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/Value"
+            app:layout_constraintStart_toEndOf="@id/iv_location"
+            app:layout_constraintTop_toBottomOf="@id/iv_location"
+            app:layout_constraintTop_toTopOf="@id/iv_location"
+            tools:ignore="TextContrastCheck"
+            tools:text="@string/my_address" />
+
+        <ImageView
+            android:id="@+id/iv_repository"
+            style="@style/DetailIcon"
+            android:contentDescription="@string/repository"
+            android:src="@drawable/folder"
+            app:layout_constraintStart_toStartOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_location"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_repository"
+            style="@style/Value"
+            app:layout_constraintBottom_toBottomOf="@id/iv_repository"
+            app:layout_constraintStart_toEndOf="@id/iv_repository"
+            app:layout_constraintTop_toTopOf="@id/iv_repository"
+            tools:ignore="TextContrastCheck"
+            tools:text="32 Repositories" />
+
+        <ImageView
+            android:id="@+id/iv_follower"
+            style="@style/DetailIcon"
+            android:contentDescription="@string/follower"
+            android:src="@drawable/audience"
+            app:layout_constraintStart_toStartOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_repository"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_follower"
+            style="@style/Value"
+            app:layout_constraintBottom_toBottomOf="@id/iv_follower"
+            app:layout_constraintStart_toEndOf="@id/iv_follower"
+            app:layout_constraintTop_toTopOf="@id/iv_follower"
+            tools:ignore="TextContrastCheck"
+            tools:text="24 Follower" />
+
+
+        <ImageView
+            android:id="@+id/iv_following"
+            style="@style/DetailIcon"
+            android:contentDescription="@string/following"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_follower"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_following"
+            style="@style/Value"
+            app:layout_constraintBottom_toBottomOf="@id/iv_following"
+            app:layout_constraintStart_toEndOf="@id/iv_following"
+            app:layout_constraintTop_toTopOf="@id/iv_following"
+            tools:ignore="TextContrastCheck"
+            tools:text="1293198 Following" />
+
+        <ImageView
+            android:id="@+id/iv_cant_load"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/cant_load"
+            android:src="@drawable/search_fail"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_cant_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/cant_load"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_cant_load" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_following"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/dark_grey"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabs" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

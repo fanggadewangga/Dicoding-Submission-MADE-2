@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.follower.FollowerFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:id="@+id/rv_follower"
+        android:layout_width="match_parent"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_search_fail"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:contentDescription="@string/search_fail"
+        android:src="@drawable/search_fail"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey" />
+
+    <TextView
+        android:id="@+id/tv_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/search_cant_find"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_search_fail" />
+
+    <ProgressBar
+        android:id="@+id/follower_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:indeterminateTintMode="src_atop"
+        android:backgroundTintMode="add"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

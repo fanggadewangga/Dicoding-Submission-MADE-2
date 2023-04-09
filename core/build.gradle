@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    namespace 'com.fangga.core'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_KEY', API_KEY
+        it.buildConfigField 'String', 'BASE_URL', BASE_URL
+    }
+}
+
+dependencies {
+    //Network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+    implementation "com.google.code.gson:gson:2.9.0"
+
+    // room
+    api 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation "androidx.room:room-ktx:2.5.1"
+
+    //Coroutine Flow
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+}

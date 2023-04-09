@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_user_avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/user_s_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_username"
+            tools:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/iv_user_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Username" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/right_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/iv_user_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_user_avatar"
+            app:tint="@color/grey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
