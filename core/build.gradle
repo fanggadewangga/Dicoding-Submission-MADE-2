@@ -23,6 +23,9 @@ android {
         release {
             minifyEnabled true
         }
+        debug {
+            minifyEnabled true
+        }
     }
 
     buildFeatures {
