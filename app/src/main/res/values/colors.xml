@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="darker_grey">#73777B</color>
+    <color name="darker_grey" tools:keep="@color/darker_grey">#73777B</color>
 </resources>

@@ -7,7 +7,7 @@ import com.fangga.core.utils.ScreenOrientation
 
 abstract class BaseActivity<VB: ViewBinding>: AppCompatActivity() {
     private lateinit var _binding: VB
-    val binding get() = _binding
+    private val binding get() = _binding
 
     abstract fun inflateViewBinding(): VB
     abstract fun determineScreenOrientation(): ScreenOrientation?

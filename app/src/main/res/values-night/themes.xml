@@ -57,7 +57,4 @@
         <item name="android:background">@color/black</item>
     </style>
 
-    <style name="cardbackground">
-        <item name="android:backgroundTint">@color/dark_grey</item>
-    </style>
 </resources>

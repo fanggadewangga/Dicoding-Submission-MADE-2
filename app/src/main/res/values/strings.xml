@@ -1,18 +1,18 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Github User App</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" tools:keep="@string/action_settings">Settings</string>
     <string name="follower">Follower</string>
     <string name="following">Following</string>
-    <string name="profile">Profile</string>
-    <string name="line">line</string>
+    <string name="profile" tools:keep="@string/profile">Profile</string>
+    <string name="line" tools:keep="@string/line">line</string>
     <string name="company">Company</string>
-    <string name="university_of_brawijaya">University of Brawijaya</string>
+    <string name="university_of_brawijaya" tools:keep="@string/university_of_brawijaya">University of Brawijaya</string>
     <string name="location">Location</string>
-    <string name="lamongan_indonesia">Lamongan, Indonesia</string>
+    <string name="lamongan_indonesia" tools:keep="@string/lamongan_indonesia">Lamongan, Indonesia</string>
     <string name="repository">Repository</string>
     <string name="user_avatar">user_avatar</string>
-    <string name="_32">32</string>
-    <string name="github_user_app">Github User App</string>
+    <string name="_32" tools:keep="@string/_32">32</string>
+    <string name="github_user_app" tools:keep="@string/github_user_app">Github User App</string>
     <string name="topbar_subtitle">Find your developers to make the world more intelligent!</string>
     <string name="please_find">Please Find a Username!</string>
     <string name="icon_find">icon_find</string>
